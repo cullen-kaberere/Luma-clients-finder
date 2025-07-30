@@ -6,6 +6,13 @@ name = "pypi"
 [packages]
 flask-apscheduler = "*"
 sendgrid = "*"
+flask = "*"
+flask-sqlalchemy = "*"
+python-dotenv = "*"
+psycopg2-binary = "*"
+requests = "*"
+beautifulsoup4 = "*"
+apscheduler = "*"
 
 [dev-packages]
 

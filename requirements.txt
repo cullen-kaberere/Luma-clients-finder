@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+APScheduler
+requests
+beautifulsoup4
+python-dotenv
+psycopg2-binary

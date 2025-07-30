@@ -1,9 +1,11 @@
-# config.py
-
 import os
+from dotenv import load_dotenv
 
-# Replace with your real DB URI
-DATABASE_URI = os.getenv("DATABASE_URI", "postgresql://postgres:password@localhost:5432/leads_db")
-EMAIL_SENDER = os.getenv("EMAIL_SENDER", "youremail@example.com")
-EMAIL_RECEIVER = os.getenv("EMAIL_RECEIVER", "yourinbox@example.com")
-SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY", "your_sendgrid_api_key")
+load_dotenv()
+
+class Config:
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    EMAIL_USER = os.getenv('EMAIL_USER')
+    EMAIL_PASS = os.getenv('EMAIL_PASS')
+    EMAIL_TO = os.getenv('EMAIL_TO')
